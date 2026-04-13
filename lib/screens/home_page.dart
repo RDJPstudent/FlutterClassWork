@@ -12,16 +12,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold( 
     appBar: AppBar(
+      backgroundColor: Colors.deepOrange,
       title:
       Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
         Image.asset('Assets/rdplogo.png', height: 80),
         Text('Daily Planner', style: TextStyle(
-          fontFamily: 'Caveat'),
+          fontFamily: 'Caveat', fontSize: 52, color: Colors.blueGrey),
         )
         ],
       ) 
-      )
+      ),
+      drawer: Drawer(),
     );
   }
 }
