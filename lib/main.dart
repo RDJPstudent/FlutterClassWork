@@ -20,8 +20,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => TaskProvider(), //lambda is anon function
-      child: HomePage(),
+      create:(context) => TaskProvider(),
+      child: MaterialApp(
+        home: HomePage()
+        ),
     );
   }
 }

@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
 //provider is a service. Can be renamed as Services
-import 'package:provider/provider.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'packkage:myapp/models/task_model.dart';
+
 
 class Task{
 final String? id;
