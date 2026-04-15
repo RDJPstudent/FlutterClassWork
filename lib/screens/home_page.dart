@@ -69,13 +69,17 @@ class _HomePageState extends State<HomePage> {
           itemCount: tp.tasks.length, //The itemCount is the index
           itemBuilder: (context, i){
             final task = tp.tasks[i]; // the i is just the length; however long the task is
+            final taskName = task.title;
             return ListTile(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
                ), // 8 pixels
-                tileColor: i.isEven ? Colors.blue : Colors.green
-              
-
+                tileColor: i.isEven ? const Color.fromARGB(255, 41, 93, 135) : const Color.fromARGB(255, 101, 68, 113),
+                leading: Icon(task.completed ? Icons.check_circle : Icons.circle_outlined), //We are in a loop. Let's ternary
+                title: Text('$taskName', style: TextStyle(
+                  fontSize: 22,
+                  decoration: task.completed ? TextDecoration.lineThrough : null, 
+                )) //TextStyle is a widget
               );
 
             
